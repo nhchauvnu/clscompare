@@ -1,0 +1,7 @@
+echo "# devdataprod" >> README.md
+git init
+git add README.md
+git commit -m "Initial commit"
+git remote add origin https://github.com/nhchauvnu/devdataprod.git
+git push -u origin master
+

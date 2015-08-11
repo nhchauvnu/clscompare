@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comparison of KNN, C4.5 and C5.0 classification methods</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Comparison of KNN, C4.5 and C5.0 classification methods">
+  <meta name="author" content="Chau Nguyen">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Comparison of KNN, C4.5 and C5.0 classification methods</h1>
+    <h2>(mainly for visualization purpose)</h2>
+    <p>Chau Nguyen<br/>UET, VNU</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Slide 2</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Issue 1</li>
+<li>Issue 2</li>
+</ul>
+
+<pre><code class="r">y = rnorm(100)
+x1 = runif(100)
+x2 = rpois(100, 5)
+x3 = rexp(100)
+fit &lt;- lm(y ~ x1 + x2 + x3)
+# summary(fit)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="intro" id="1" style="background:;">
+  <hgroup>
+    <h2>Slide 2</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>## 
+## Call:
+## lm(formula = y ~ x1 + x2 + x3)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.3188 -0.5718 -0.0998  0.5335  2.5951 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)  
+## (Intercept) -0.36844    0.30475  -1.209   0.2296  
+## x1           0.85774    0.34882   2.459   0.0157 *
+## x2           0.00822    0.03824   0.215   0.8303  
+## x3           0.01773    0.07700   0.230   0.8184  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.9165 on 96 degrees of freedom
+## Multiple R-squared:  0.05936,    Adjusted R-squared:  0.02997 
+## F-statistic: 2.019 on 3 and 96 DF,  p-value: 0.1163
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Slide 2'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Slide 2'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='NA'>
+         3
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

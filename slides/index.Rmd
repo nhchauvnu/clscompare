@@ -1,0 +1,36 @@
+---
+title       : Comparison of KNN, C4.5 and C5.0 classification methods
+subtitle    : (mainly for visualization purpose)
+author      : Chau Nguyen
+job         : UET, VNU
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+url         :
+    libraries: ../libraries
+    assets: ../assets
+---
+
+## Slide 2
+- Issue 1
+- Issue 2
+```{r, echo=TRUE}
+y = rnorm(100)
+x1 = runif(100)
+x2 = rpois(100, 5)
+x3 = rexp(100)
+fit <- lm(y ~ x1 + x2 + x3)
+# summary(fit)
+```
+
+--- .intro #1
+
+## Slide 2
+```{r, echo=FALSE}
+summary(fit)
+```
+
+--- 
