@@ -2,6 +2,9 @@ library(shiny)
 library(caret)
 library(ggplot2)
 library(readr)
+library(e1071)
+library(randomForest)
+library(rpart)
 
 shinyServer(
 function(input, output) {
@@ -24,7 +27,8 @@ function(input, output) {
 		m = confusionMatrix(testdata[,5], test)
 
 		if (method == 'knn') method = 'KNN'
-		if (method == 'rpart') method = 'C4.5'
+		if (method == 'rpart') method = 'CART'
+		if (method == 'rf') method = 'Random Forests'
 		rm(traindata)
 		rm(testdata)
 
