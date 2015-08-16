@@ -63,7 +63,7 @@ shinyUI(fluidPage(
 				produces two plots in the \"Plots\" tab. The first one depicts classification results and
 				the second one describes the test data set divided by Species variable. Data items in the same
 				class have the same color. They are also grouped by 2D density plots in the graph for easy viewing.
-				Initially the two plots use Petal.Length and Petal.Width as x-axis and y-axis respectively.
+				Initially the two plots use Petal.Length and Petal.Width as x-axis and y-axis, respectively.
 				You can change the x-axis and y-axis using the
 				two checkboxes on the left \"Choose y-axis of the plot\" and \"Choose y-axis of the plot\".
 				If the x-axis and y-axis are the same, the pairs plot will be produced. The next output,
