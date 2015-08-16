@@ -1,7 +1,7 @@
 ---
-title       : Comparison of KNN, C4.5 and C5.0 classification methods
-subtitle    : (mainly for visualization purpose)
-author      : Chau Nguyen
+title       : Comparison of KNN, CART and Random Forests classification methods
+subtitle    : (clscompare application)
+author      : Chau Nguyen (nhchau@gmail.com)
 job         : UET, VNU
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -14,23 +14,41 @@ url         :
     assets: ../assets
 ---
 
-## Slide 2
-- Issue 1
-- Issue 2
-```{r, echo=TRUE}
-y = rnorm(100)
-x1 = runif(100)
-x2 = rpois(100, 5)
-x3 = rexp(100)
-fit <- lm(y ~ x1 + x2 + x3)
-# summary(fit)
-```
+## Introduction
+- clscompare is a Shiny application uses to compare KNN, CART and Random Forests classification methods
+- Method of comparison: Apply the above classification methods on the same training and testing data sets
+then compare prediction results
+- Data set to use: the iris data set
+- Application URL: https://nhchau.shinyapps.io/clscompare
 
 --- .intro #1
 
-## Slide 2
-```{r, echo=FALSE}
-summary(fit)
+## The iris data set
+- The followings are the iris data set structure and the first four items:
+```{r,echo=F}
+str(iris)
+head(iris, 4)
 ```
+- Predictors: Sepal.Length Sepal.Width Petal.Length Petal.Width, outcome: Species
+
+---
+
+## Application input parameters
+- A seed number for random number generation
+- Relative size of the training data set with reference to the iris data set
+- Classfication method to use
 
 --- 
+
+## Application outputs
+- Plots:
+  + Plot 1: Prediction results on the test data set
+  + Plot 2: The test data sets classified as it is
+- The confusion matrix
+- The iris data set in details: List of all items in data sets. Each item
+has an additional indicator specifying the items belonging to training or testing data sets
+- The test data set with an additional score on each item specifying whether the item
+is correctly/incorrectly classified
+
+--- 
+

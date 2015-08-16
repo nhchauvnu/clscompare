@@ -1,7 +1,7 @@
 ---
-title       : Comparison of KNN, C4.5 and C5.0 classification methods
-subtitle    : (mainly for visualization purpose)
-author      : Chau Nguyen
+title       : Comparison of KNN, CART and Random Forests classification methods
+subtitle    : (clscompare application)
+author      : Chau Nguyen (nhchau@gmail.com)
 job         : UET, VNU
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -14,44 +14,54 @@ url         :
     assets: ../assets
 ---
 
-## Slide 2
-- Issue 1
-- Issue 2
-
-```r
-y = rnorm(100)
-x1 = runif(100)
-x2 = rpois(100, 5)
-x3 = rexp(100)
-fit <- lm(y ~ x1 + x2 + x3)
-# summary(fit)
-```
+## Introduction
+- clscompare is a Shiny application uses to compare KNN, CART and Random Forests classification methods
+- Method of comparison: Apply the above classification methods on the same training and testing data sets
+then compare prediction results
+- Data set to use: the iris data set
+- Application URL: https://nhchau.shinyapps.io/clscompare
 
 --- .intro #1
 
-## Slide 2
+## The iris data set
+- The followings are the iris data set structure and the first four items:
 
 ```
-## 
-## Call:
-## lm(formula = y ~ x1 + x2 + x3)
-## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -3.3188 -0.5718 -0.0998  0.5335  2.5951 
-## 
-## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)  
-## (Intercept) -0.36844    0.30475  -1.209   0.2296  
-## x1           0.85774    0.34882   2.459   0.0157 *
-## x2           0.00822    0.03824   0.215   0.8303  
-## x3           0.01773    0.07700   0.230   0.8184  
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 0.9165 on 96 degrees of freedom
-## Multiple R-squared:  0.05936,	Adjusted R-squared:  0.02997 
-## F-statistic: 2.019 on 3 and 96 DF,  p-value: 0.1163
+## 'data.frame':	150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
 ```
+
+```
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+```
+- Predictors: Sepal.Length Sepal.Width Petal.Length Petal.Width, outcome: Species
+
+---
+
+## Application input parameters
+- A seed number for random number generation
+- Relative size of the training data set with reference to the iris data set
+- Classfication method to use
 
 --- 
+
+## Application outputs
+- Plots:
+  + Plot 1: Prediction results on the test data set
+  + Plot 2: The test data sets classified as it is
+- The confusion matrix
+- The iris data set in details: List of all items in data sets. Each item
+has an additional indicator specifying the items belonging to training or testing data sets
+- The test data set with an additional score on each item specifying whether the item
+is correctly/incorrectly classified
+
+--- 
+

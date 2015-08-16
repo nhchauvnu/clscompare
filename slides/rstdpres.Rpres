@@ -33,7 +33,7 @@ Slide test
 ===
 - We show here density function of a Poisson distribution
 - ```n=100, lambda=5```
-```{r, echo=TRUE}
+```{r, echo=TRUE,eval=TRUE}
 plot(density(rpois(100,5)))
 ```
 
