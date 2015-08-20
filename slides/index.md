@@ -1,7 +1,7 @@
 ---
 title       : Comparison of KNN, CART and Random Forests classification methods
 subtitle    : (clscompare application)
-author      : Chau Nguyen (nhchau@gmail.com)
+author      : Chau Nguyen (nhchau@gmail.com) - 20 Aug, 2015
 job         : UET, VNU
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -62,6 +62,6 @@ then compare prediction results
 ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png) ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-2.png) 
 - The confusion matrix
 - The iris data set in details: List of all items in data sets. Each item
-has an additional indicator specifying the items belonging to training or testing data sets
+has an additional indicator specifying the item belonging to training or testing data sets
 - The test data set with an additional score on each item specifying whether the item
 is correctly/incorrectly classified
