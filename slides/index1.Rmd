@@ -15,21 +15,11 @@ url         :
 ---
 
 ## Introduction
-- clscompare is an application uses to compare KNN, CART and Random Forests classification methods.
-Application URL: https://nhchau.shinyapps.io/clscompare. Data set: iris
-
-<center>
-```{r, echo=F, result="hide", fig.width=4.5, fig.height=4.5}
-library(caret)
-library(rpart)
-set.seed(12345)
-iris$Species = relevel(iris$Species, "versicolor")
-iris$Species = relevel(iris$Species, "virginica")
-plot(iris[,1:4], col=iris$Species, main="The iris data set")
-```
-</center>
+- clscompare is a Shiny application uses to compare KNN, CART and Random Forests classification methods
 - Method of comparison: Apply the above classification methods on the same training and testing data sets
 then compare prediction results
+- Data set to use: the iris data set
+- Application URL: https://nhchau.shinyapps.io/clscompare
 
 --- .intro #1
 
@@ -51,24 +41,13 @@ head(iris, 4)
 --- 
 
 ## Application outputs
-- Plots: Classification results (left) and Species (right) of the test data set.
-
-```{r, echo=F, result="hide", fig.width=6, fig.height=3.5}
-index=createDataPartition(iris$Species, p=0.6, list=F)
-te = iris[-index,]
-tr = iris[index, ]
-fit = train(Species~., method="rpart", data=tr)
-ClassifiedResult = predict(fit, te)
-par(mfrow=c(1,2))
-# Plot classification result
-ggplot(te, aes(x=Petal.Width, y=Petal.Length, color=ClassifiedResult))+
-	geom_point(size=3)+stat_density2d()
-# Plot Species data
-ggplot(te, aes(x=Petal.Width, y=Petal.Length, color=Species))+
-	geom_point(size=3)+stat_density2d()
-```
+- Plots:
+  + Plot 1: Prediction results on the test data set
+  + Plot 2: The test data sets classified as it is
 - The confusion matrix
 - The iris data set in details: List of all items in data sets. Each item
 has an additional indicator specifying the items belonging to training or testing data sets
 - The test data set with an additional score on each item specifying whether the item
 is correctly/incorrectly classified
+
+--- 

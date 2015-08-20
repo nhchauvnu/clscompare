@@ -15,11 +15,14 @@ url         :
 ---
 
 ## Introduction
-- clscompare is a Shiny application uses to compare KNN, CART and Random Forests classification methods
+- clscompare is an application uses to compare KNN, CART and Random Forests classification methods.
+Application URL: https://nhchau.shinyapps.io/clscompare. Data set: iris
+
+<center>
+![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png) 
+</center>
 - Method of comparison: Apply the above classification methods on the same training and testing data sets
 then compare prediction results
-- Data set to use: the iris data set
-- Application URL: https://nhchau.shinyapps.io/clscompare
 
 --- .intro #1
 
@@ -32,7 +35,7 @@ then compare prediction results
 ##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
 ##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
 ##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
-##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Species     : Factor w/ 3 levels "virginica","versicolor",..: 3 3 3 3 3 3 3 3 3 3 ...
 ```
 
 ```
@@ -54,14 +57,11 @@ then compare prediction results
 --- 
 
 ## Application outputs
-- Plots:
-  + Plot 1: Prediction results on the test data set
-  + Plot 2: The test data sets classified as it is
+- Plots: Classification results (left) and Species (right) of the test data set.
+
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png) ![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-2.png) 
 - The confusion matrix
 - The iris data set in details: List of all items in data sets. Each item
 has an additional indicator specifying the items belonging to training or testing data sets
 - The test data set with an additional score on each item specifying whether the item
 is correctly/incorrectly classified
-
---- 
-
