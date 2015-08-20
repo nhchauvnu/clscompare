@@ -1,7 +1,7 @@
 ---
 title       : Comparison of KNN, CART and Random Forests classification methods
 subtitle    : (clscompare application)
-author      : Chau Nguyen (nhchau@gmail.com) - 20 Aug, 2015
+author      : Chau Nguyen (nhchau@gmail.com) - Aug 20, 2015
 job         : UET, VNU
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
